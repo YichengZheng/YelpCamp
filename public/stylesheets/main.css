@@ -1,0 +1,17 @@
+
+.thumbnail{
+    padding: 0;
+}
+
+/*all image tag inside thumbnail*/
+.thumbnail img{
+    width: 100%;
+}
+
+.thumbnail .caption-full{
+    padding: 9px;
+}
+
+#delete-form{
+    display: inline;
+}

@@ -1,0 +1,41 @@
+<!--go one level up and include the header and footer file-->
+<% include ../partials/header %>
+
+<!--header class from bootstrap-->
+
+<div class = "container">
+    <header class = "jumbotron">
+        <!--container inside a container for spacing-->
+        <div class = "container">
+                  <h1>Welcome to YelpCamp</h1>
+        <p>View our hand-picked campgrounds</p>
+        <p>
+            <!--anchor tag with button class-->
+            <a class = "btn btn-primary btn-large" href= "/campgrounds/new">Add New Campground</a>
+            
+        </p>
+        </div>
+    </header>
+    
+    <div class = "row text-center" style = "display:flex; flex-wrap: wrap;">
+        <% campgrounds.forEach(function(campground){ %>
+        <!--for each campground, put a column-->
+        <div class = "col-md-3 col-sm-6">
+            <!--thumbnail class to show smaller images-->
+            <div class = "thumbnail">
+                <img src = "<%= campground.image %>">
+                <div class = "caption">
+                    <h4><%= campground.name %></h4>
+                </div>
+                <p>
+                    <!--add a more info button below the image -->
+                    <!--campground._id is the mongo object id -->
+                    <a href = "/campgrounds/<%= campground._id %>" class = "btn btn-primary">More Info</a>
+                </p>
+            </div>
+        </div>
+    <% }); %>
+    </div>
+</div>
+
+<% include ../partials/footer %>
