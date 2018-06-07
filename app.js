@@ -33,10 +33,10 @@ console.log(url);
 // development database
 // mongoose.connect("mongodb://localhost/yelp_camp_v7");
 
-mongoose.connect(url);
+//mongoose.connect(url);
 
 // production database
-// mongoose.connect("mongodb://yichengzheng:74314795mongo@ds249530.mlab.com:49530/yelpcampyz");
+mongoose.connect("mongodb://yichengzheng:74314795mongo@ds249530.mlab.com:49530/yelpcampyz");
 
 
 
