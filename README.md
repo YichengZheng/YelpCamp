@@ -16,12 +16,17 @@ Site is deployed to Heroku and backend MongoDB database is hosted on mLab.
     "request": "^2.87.0"
     
 ## Folders Description:
-models: Consists of Mongoose Schema data objects for campgrounds, users, and comments. These are imported in the app.js and associated files in the route folder
-routes: Consists of RESTful routes definition for campgrounds and comments. The index.js file contains the logic handling user register, login, and logoff routes using functions from passport.js
-public/stylesheets: custom CSS style sheets
-middleware: constructs middleware object used in routes file to determine whether user has logged in and whether the specific camground/comment belongs to the current user in session
-views: contain the .ejs file generating HTML for each pages. These are called by the res.render() function in the route files
-views/partial: common header and footer ejs file shared among all .ejs file
+**models:** Consists of Mongoose Schema data objects for campgrounds, users, and comments. These are imported in the app.js and associated files in the route folder
+
+**routes:** Consists of RESTful routes definition for campgrounds and comments. The index.js file contains the logic handling user register, login, and logoff routes using functions from passport.js
+
+**public/stylesheets:** custom CSS style sheets
+
+**middleware:** constructs middleware object used in routes file to determine whether user has logged in and whether the specific camground/comment belongs to the current user in session
+
+**views:** contain the .ejs file generating HTML for each pages. These are called by the res.render() function in the route files
+
+**views/partial:** common header and footer ejs file shared among all .ejs file
 
 
 ## RESTful Routes: 
